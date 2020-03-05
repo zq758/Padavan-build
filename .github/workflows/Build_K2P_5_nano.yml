@@ -37,7 +37,7 @@ jobs:
         TNAME: K2P_nano-5.0
       run: |
         cd /opt/rt-n56u/toolchain-mipsel
-        sudo ./clean_sources
+        sudo ./clean_toolchain
         sudo ./build_toolchain
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
