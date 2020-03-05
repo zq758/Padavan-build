@@ -43,7 +43,8 @@ jobs:
         TNAME: K2P_nano-5.0
       run: |
         cd /opt/rt-n56u/trunk
-        wget -P /opt/rt-n56u/trunk https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
+        wget https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
+        sudo chmod a+x build_firmware_bkye
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
         exit 1
