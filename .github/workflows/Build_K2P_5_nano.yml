@@ -31,14 +31,14 @@ jobs:
     - name: Clone source code
       run: |
         git clone https://github.com/hanwckf/rt-n56u.git /opt/rt-n56u
-        cd /opt/rt-n56u/toolchain-mipsel
-        sudo ./clean_sources
-        sudo ./build_toolchain
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
         TNAME: K2P_nano-5.0
       run: |
+        cd /opt/rt-n56u/toolchain-mipsel
+        sudo ./clean_sources
+        sudo ./build_toolchain
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
