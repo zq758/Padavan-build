@@ -44,15 +44,15 @@ jobs:
         TNAME: PSG1218
       run: |
         cd /opt/rt-n56u/trunk
-        wget https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
-        sudo chmod a+x build_firmware_bkye
+        #wget https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
+        #sudo chmod a+x build_firmware_bkye
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
         exit 1
         fi
         cp -f configs/templates/$TNAME.config .config
         sudo ./clear_tree
-        sudo ./build_firmware_bkye $TNAME
+        sudo ./build_firmware_modify $TNAME
         sudo mv -f images/*.trx /opt/images/
     - name : Upload packages
       uses: actions/upload-artifact@master
