@@ -1,5 +1,5 @@
 #修改TNAME: K2P-5.0 中的K2P-5.0为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: Build Padavan K2P
+name: Build Padavan DIR-882-5.0
 
 on: 
   release:
@@ -40,7 +40,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: K2P_nano-5.0
+        TNAME: DIR-882-5.0
       run: |
         cd /opt/rt-n56u/trunk
         #wget https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
