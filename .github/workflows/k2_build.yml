@@ -41,7 +41,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: PSG1218
+        TNAME: DIR-882-5.0
       run: |
         cd /opt/rt-n56u/trunk
         #wget https://raw.githubusercontent.com/chongshengB/rt-n56u/master/trunk/build_firmware_bkye
