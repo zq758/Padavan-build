@@ -35,6 +35,7 @@ jobs:
         git clone --depth=1 https://github.com/hanwckf/rt-n56u.git /opt/rt-n56u
         cd /opt/rt-n56u/toolchain-mipsel
         sh dl_toolchain.sh
+        mkdir -p /opt/images/
     - name: Build Firmware
       env:
         TNAME: DIR-882
